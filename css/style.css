@@ -253,11 +253,11 @@ header {
     .header-nav-pc-about ul li {
         position: relative;
         margin-bottom: 15px;
+        width: 300px;
     }
 
     .header-nav-pc-about ul li a {
         margin-left: 25px;
-        width: 300px;
     }
 
     .header-nav-pc-about ul li::before {

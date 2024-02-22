@@ -11,6 +11,14 @@ jQuery(function ($) {
         $(".table-of-contents-wrapper").slideToggle();
     });
 
+    $(".header-nav-pc-about").hover(
+
+        function() {
+            $(this).toggleClass("active");
+            $(".header-nav-pc-about ul").stop().slideToggle();
+        }
+    );
+
 // 動きのきっかけとなるアニメーションの名前を定義
 function fadeAnime(){
 

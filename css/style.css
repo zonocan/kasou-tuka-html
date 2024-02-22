@@ -11,7 +11,6 @@
     --pc-h4-font-size: 25px;
     --pc-h5-font-size: 25px;
     --pc-main-font-size: 15px;
-    --pc-h3-font-size: 20px;
 
     /* background-color */
     --body-color: #FCFCFC;
@@ -45,6 +44,12 @@ body {
     
 }
 
+@media screen and (min-width: 960px) {
+    body {
+        font-size: var(--pc-main-font-size);
+    }
+}
+
 h2 {
     position: relative;
     color: var(--strong-font-color-01);
@@ -61,19 +66,39 @@ h2::after {
     top: 15px;
 }
 
+h2 span {
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 960px) {
+    h2 {
+        font-size: var(--pc-h2-font-size);
+        margin-bottom: var(--pc-main-mb-pb);
+    }
+
+    h2::after {
+        top: 25px;
+        width: 85%;
+    }
+}
+
 h3 {
     font-weight: bold;
     color: var(--strong-font-color-01);
-    font-size: var(--pc-h3-font-size);
+    font-size: var(--sp-h3-font-size);
     border-bottom: 1px solid var(--main-bd-color);
     padding-left: 15px;
     margin-bottom: var(--sp-main-mb-pb);
 }
 
-h2 span {
-    margin-right: 15px;
-    font-weight: bold;
+@media screen and (min-width: 960px) {
+    h3 {
+        font-size: var(--pc-h3-font-size);
+        margin-bottom: var(--pc-main-mb-pb);
+    }
 }
+
 
 h4 {
     margin-bottom: 15px;
@@ -94,8 +119,8 @@ h5 {
 }
 
 @media screen and (min-width: 960px) {
-    body {
-        font-size: var(--pc-main-font-size);
+    h5 {
+        font-size: var(--pc-h5-font-size);
     }
 }
 
@@ -184,6 +209,66 @@ header {
     top: 20px;
     transform: rotate(-45deg);
 }
+
+@media screen and (min-width: 960px) {
+    header nav {
+        margin-left: auto;
+        width: 30%;
+        padding: 5px 0;
+    }
+
+    header nav ul {
+        justify-content: space-between;
+    }
+
+    header nav ul li {
+        width: 30%;
+    }
+
+    header nav ul li a {
+        color: var(--strong-font-color-02);
+    }
+
+    .header-nav-pc-about {
+        position: relative;
+    }
+
+    .header-nav-pc-about .d-fl span {
+        margin: 6.5px;
+    }
+
+    .header-nav-pc-about.active .d-fl span img {
+        transform: rotate(90deg);
+    }
+
+    .header-nav-pc-about ul {
+        width: 300%;
+        position: absolute;
+        padding: 15px;
+        background-color: var(--header-footer-color);
+        top: 38px;
+        border-top: 1px solid var(--strong-font-color-02);
+    }
+
+    .header-nav-pc-about ul li {
+        position: relative;
+        margin-bottom: 15px;
+    }
+
+    .header-nav-pc-about ul li a {
+        margin-left: 25px;
+    }
+
+    .header-nav-pc-about ul li::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 20px;
+        top: 12px;
+        background-color: var(--strong-font-color-02);
+    }
+
+}
 /* header */
 
 .hum-list {
@@ -221,10 +306,16 @@ header {
 .hum-list-about ul li a {
     padding-left: 30px;
 }
-/*  */
+/* .hum-list */
 
 .bunner-wrapper {
     margin-bottom: var(--sp-main-mb-pb);
+}
+
+@media screen and (min-width: 960px)  {
+    .bunner-wrapper {
+        margin-bottom: var(--pc-main-mb-pb);
+    }    
 }
 
 .bunner-wrapper img {
@@ -260,6 +351,20 @@ header {
     transform: rotate(180deg);
 }
 
+
+@media screen and (min-width: 960px)  {
+    .table-of-contents-accordion-triger-btn {
+        height: 40px;
+        padding: 5px 0 5px 15px;     
+        font-size: 20px;   
+    }
+    .table-of-contents-accordion-triger-btn::before,
+    .table-of-contents-accordion-triger-btn::after {
+        top: 18px;
+        width: 20px;
+    }    
+}
+
 .table-of-contents-wrapper {
     width: 100%;
     padding: var(--sp-main-mb-pb) 15px;
@@ -289,6 +394,12 @@ header {
     padding: 15px;
     line-height: 1.5rem;
 }
+
+@media screen and (min-width: 960px) {
+    .section-inner {
+        margin-bottom: var(--pc-main-mb-pb);
+    }
+}
 /*  */
 
 .form-wrapper {
@@ -312,6 +423,7 @@ header {
 .form-inner ul li textarea {
     width: 100%;
     border: 1px solid var(--strong-font-color-02);
+    padding: 5px;
 }
 
 form button{
@@ -326,6 +438,19 @@ form button{
 form button span {
     margin-right: 10px;
 }
+
+@media screen and (min-width: 960px) {
+    #contact {
+        margin-bottom: var(--pc-main-mb-pb);
+    }
+
+    .form-inner ul li input,
+    .form-inner ul li textarea  {
+        width: 65%;
+        padding: 10px;
+    }    
+}
+/* #contact */
 
 footer {
     background-color: var(--header-footer-color);

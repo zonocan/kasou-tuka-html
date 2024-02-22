@@ -257,7 +257,7 @@ header {
 
     .header-nav-pc-about ul li a {
         margin-left: 25px;
-        width: 100%;
+        width: 300px;
     }
 
     .header-nav-pc-about ul li::before {
